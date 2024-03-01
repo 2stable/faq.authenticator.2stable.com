@@ -31,7 +31,7 @@ struct Generator: ParsableCommand {
                 
                 faq.append(Faq(
                     platform: platform,
-                    url: URL(string: "\(folder.path(relativeTo: current))/\(file.name)", relativeTo: config.base)!,
+                    url: URL(string: "\(config.base)/\(folder.path(relativeTo: current))/\(file.name)")!,
                     title: title,
                     icon: icon(frontMatter: frontMatter, config: config)
                 ))
